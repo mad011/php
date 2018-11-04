@@ -20,14 +20,14 @@ for($x=0;$x<=10;$x++)
 
 
         echo $x."*".$y."=".$z=$x*$y."<br>";  
-//    if($z==20){
-//        echo "you will find it";
-//        break;
-//    }
+    //    if($z==20){
+    //        echo "you will find it";
+    //        break;
+    //    }
     echo "<br>";
-  
 
-   
+
+
 }
 
 ?>    
