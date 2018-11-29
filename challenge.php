@@ -14,15 +14,15 @@ foreach ($money as $value) {
 
         //        $amount_atm=$amount_atm+10;
         echo  "get the money".$value; 
-        break;
+        
     }    
     else
     {
-        echo "no";
+        echo "this amount cant be given";
 
 
     }
-
+    break;
 
 
 }
