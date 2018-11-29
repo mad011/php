@@ -1,35 +1,31 @@
-
-
-
-
-
 <?php
-$counter=0;
-$amount = $_GET['amount'];
-$pin = $_GET['pin'];
-$submit = $_GET['submit'];
+
+$amount_atm = $_GET["amount"]; 
+
+$counter =0;
+$money = array(10,30,50,100);
+//var_dump($money);
 
 
 
+foreach ($money as $value) {
+
+    if ($value == $amount_atm){
+
+        //        $amount_atm=$amount_atm+10;
+        echo  "get the money".$value; 
+        break;
+    }    
+    else
+    {
+        echo "no";
 
 
+    }
 
-
-if ($pin == "test"  || $counter == 2) {
-    echo 'προχωρηστε στην συναλλαγή!';
-  
-
-} else {
-    echo 'απομένουν δυο προσπάθειες.';
-   
-    $counter++;
-    echo "<br>";
-    echo "first attempt".$counter;
-   
-   
 
 
 }
 
-
 ?>
+
