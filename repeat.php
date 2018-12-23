@@ -1,27 +1,20 @@
 <?php
 
-class Stud
-{
-    public $name = 'alex'; 
-    public $fem = true;    
-
-
-
-
-    public function Data() {
-
-        var_dump(get_class($this));
-//     return  get_class($this);
-
-
-    }
+$i=3;
+while($i>0){
+switch ($i) {
+    case 0:
+        echo "i=0";
+        break;
+    case 1:
+        echo "i=1";
+        break;
+    case 2:
+        echo "i=2";
+        break;
+ }
 }
-$stud = new Stud();
-//echo $stud->name;
-//echo $stud->fem;
-echo $stud->Data();
-
-
-
-
 ?>
+
+
+

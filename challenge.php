@@ -1,28 +1,29 @@
 <?php
 
 $amount_atm = $_GET["amount"]; 
-
+$d=1;
 $check=30;
-$min=0;
+$some = 0;
 $value_max=50;
-$value_min=20;    
-//$givemoney=50;
-
-
-for($money=20;$money<=30;$money++){
-    $money=$amount_atm;
-
-
-
+$value_min=20;  
+$givemoney=0;
+$money=$amount_atm;
+$value=20;
+$result=0;
+$get=0;
+$condition=0;
+$total=0;
+$condition_final=0;
+$found = false;
+while($amount_atm){
     if($money<20){
         echo "elaxista to poso einai to 20";
-        break;
+
     }
 
 
     elseif ($money == $check){
         echo "not valid";
-        break;
 
     }
     elseif ($money % 10 == 0){
@@ -35,77 +36,51 @@ for($money=20;$money<=30;$money++){
     }
     else {
         echo "to pos pou zitisate den mporei na dothei";
-        break;
 
 
     }
+    break;
+}
 
+while($givemoney){
 
+    if($givemoney % 50 == 0 && $givemoney >= 100){
 
-    for($i=0;$i<1;$i++){
-        if($givemoney){
-            $value=$givemoney/$value_max;
-            $value_get = intval($value);
-           
-            
-            echo '<br> to poso pou zitisate einai ' .$value_get.' xartonomismata twn 50eurw ' ;
-           
-      }
-        
-       
+        $value_max= $givemoney / 50;
+        echo 'to poso einai '.$value_max. 'xartonomismata twn 50 eurw';
+        $condition = $givemoney;
+        echo  $condition;
 
     }
     
-  
-        for($j=0;$j<1;$j++){
-        if($givemoney % 20 == 0){
+    elseif($condition % 50 == 0 && $condition % 20 == 0)
+    {
+        $get = $givemoney / 50;
 
-            $value_s=$givemoney/$value_min;
-            $value_set=$value_s;
-            
-            echo '<br> to poso pou zitisate einai ' .$value_set.' xartonomismata twn 20eurw ';
-        }   
+        //        echo floor($get);
+        $total = intval($givemoney,100);
+        $r=$givemoney%100;
+        $p=$r/20;
+
+        echo "<br>";
+        echo  "xartonomisma twn 20 ".'</br>'.$p;
+        echo "<br>";
+        echo  "xartonomisma twn 50 ".'</br>'.floor($get);
         
-       }
+     
+
+    }
+   
       
   
 
-   
+    break;
 }
 
 
 
-
-
-
-//
-//for($i=0;$i<=9;$i++){
-//    echo '<br>'.$i;
-//    for($j=0;$j<=9;$j++){
-//        
-//        echo '<br>'.$j;
-//          break;
-//    }
-//  
-//}
-//
-
-
-
-
-//
-//function name ($numf,$numd)
-//{
-////    $result = $numf+$numd;
-////    $array_state= $result;
-////    
-////    $array_state=array();
-////    array_push($array_state,$result);
-////    print_r($array_state);
-////    
-//    
-//  
-//}
-//name(10,15);
-
 ?>
+
+
+
+
