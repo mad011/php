@@ -1,13 +1,15 @@
 
 <?php 
 
-$x = 10 ;
-if ($x<5  ||  $x == 10) {
-    echo $x;
+$x = 10;
+if ($x>1){
+    echo 'yes i am';
 }
-else{
-    echo "no";
+if  ($x>2){
+    echo "het it";
 }
-
+if($x>3){
+    echo "dsklskdlset it";
+}
 
 ?>
